@@ -22,7 +22,12 @@ public class CarServiceImpl implements CarService{
 
 
     @Override
-    public List<Car> getCars(List<Car> cars, int n) {
-        return carDAO.getCars(cars, n);
+    public List<Car> getCarsStream(int n) {
+        return carDAO.getCarsStream(n);
+    }
+
+    @Override
+    public List<Car> getCarsList() {
+        return carDAO.getCarsList();
     }
 }

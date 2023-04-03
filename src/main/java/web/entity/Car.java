@@ -2,6 +2,7 @@ package web.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Car {
 
@@ -48,5 +49,18 @@ public class Car {
         return  "model='" + model + '\'' +
                 ", gen=" + gen +
                 ", ownerName='" + ownerName + '\'';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return gen == car.gen && Objects.equals(model, car.model) && Objects.equals(ownerName, car.ownerName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, gen, ownerName);
     }
 }

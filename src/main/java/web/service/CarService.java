@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public interface CarService {
     public List<Car> addCar(List<Car> cars, Car car);
-    public List<Car> getCars(List<Car> cars, int n);
+    public List<Car> getCarsStream(int n);
+    public List<Car> getCarsList();
 }
 
