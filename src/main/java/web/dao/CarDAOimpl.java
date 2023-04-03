@@ -14,6 +14,7 @@ public class CarDAOimpl implements CarDAO {
     private Car car4 = new Car("Volvo", 90, "Kot");
     private Car car5 = new Car("Volvo", 50, "Nick");
 
+
     {cars.add(car);
         cars.add(car2);
         cars.add(car3);
