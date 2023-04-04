@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class CarServiceImpl implements CarService{
 
-    CarDAO carDAO = new CarDAOimpl();
+    private CarDAO carDAO = new CarDAOimpl();
 
 
     @Override
